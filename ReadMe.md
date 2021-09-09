@@ -11,6 +11,11 @@
     4. 点击Clone
 ### git创建仓库，在GitHub上创建后，按命令提示进行
 ### git上传
+ - 小贴上：有时github会出现SSL错误，可以使用`git config --global http.sslVerity false`临时取消github的SSL检查
  - 命令行
    1. git bash或命令行 `cd 本地仓库`
    2. `git push orgin master`(只有一个分支时省略远程分支名，其实master就是远程分支名)
+ - 工具
+    * 工具会直接显示你的修改
+    * 写好描述后，点击commit to main保存修改
+    * 然后点击push orgin提交
