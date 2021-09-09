@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme">
+        <item>废纸</item>
+        <item>塑料</item>
+        <item>玻璃</item>
+        <item>金属</item>
+        <item>纺织物</item>
+    </string-array>
+</resources>
