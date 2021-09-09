@@ -9,6 +9,9 @@
     2. file->Clone reposit
     3. 点击URL，输入第一行输入代码库git地址，第二行选择文件夹
     4. 点击Clone
+3. 使用IDE 
+    * 点击File>new >project from ……
+    * 输入地址，选择好路径，就可以
 ### git创建仓库，在GitHub上创建后，按命令提示进行
 ### git上传
  - 小贴上：有时github会出现SSL错误，可以使用`git config --global http.sslVerity false`临时取消github的SSL检查
