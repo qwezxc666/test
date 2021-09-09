@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".ui.home.AdvInforActivity">
+    <TextView
+        android:id="@+id/tv1"
+        android:textColor="#383838"
+        android:textSize="25sp"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:text="智慧社区是社区管理的一个新的管理形态，它利用物联网、云计算、移动互联网等新一代信息技术的集成应用,为社区居民提供一个安全舒适的智慧化生活环境,从而形成基于信息化、智能化社区管理与服务。 "
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"    />
+</LinearLayout>

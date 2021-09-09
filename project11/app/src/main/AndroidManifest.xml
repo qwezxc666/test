@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.project11">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Smart.ListActivity" />
+        <activity android:name=".ui.home.S32Activity" />
+        <activity android:name=".ui.home.S3Activity" />
+        <activity android:name=".ui.home.S43Activity" />
+        <activity android:name=".ui.home.S42Activity" />
+        <activity android:name=".ui.home.S4Activity" />
+        <activity android:name=".ui.home.S23Activity" />
+        <activity android:name=".ui.home.S22Activity" />
+        <activity android:name=".ui.home.S12Activity" />
+        <activity android:name=".ui.home.S2Activity" />
+        <activity android:name=".ui.home.S1Activity" />
+        <activity android:name=".ui.home.AdvInforActivity" />
+        <activity android:name=".Smart.MyCollActivity" />
+        <activity android:name=".Smart.EditAddresActivity" />
+        <activity android:name=".Smart.NewAddressActivity" />
+        <activity android:name=".Smart.SLActivity" />
+        <activity android:name=".Smart.ShopListActivity" />
+        <activity android:name=".Smart.Post2Activity" />
+        <activity android:name=".Smart.PostActivity" />
+        <activity android:name=".Smart.ShopInforActivity" />
+        <activity android:name=".Smart.ConllectionActivity" />
+        <activity android:name=".Smart.AdressActivity" />
+        <activity android:name=".Smart.MyInforActivity" />
+        <activity android:name=".Smart.OderActivity" />
+        <activity android:name=".Smart.LoginActivity" />
+        <activity android:name=".Smart.FoodActivity" />
+        <activity android:name=".ui.Activity.NewInforActivity" />
+        <activity
+            android:name=".ui.Activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

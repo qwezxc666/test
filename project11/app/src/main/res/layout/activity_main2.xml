@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Activity.MainActivity">
+    <com.youth.banner.Banner
+        app:banner_infinite_loop="false"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_above="@id/l1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:id="@+id/b1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="网络设置"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"    />
+        <Button
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:id="@+id/b2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="进入主页"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"    />
+    </LinearLayout>
+    <RelativeLayout
+        android:top="@id/l1"
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+</RelativeLayout>
