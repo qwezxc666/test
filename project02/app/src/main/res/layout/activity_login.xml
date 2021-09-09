@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".ui.Activity.LoginActivity">
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/et1"
+        android:hint="账号"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/et2"
+        android:hint="密码"
+        android:password="true"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:text="登入"
+        android:layout_marginTop="40dp"
+        android:id="@+id/b1"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
