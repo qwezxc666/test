@@ -58,6 +58,7 @@ public class MyFragment extends Fragment {
                 SharedPreferences.Editor sp=getActivity().getSharedPreferences("app", Context.MODE_PRIVATE).edit();
                 sp.putString("token","");
                 sp.apply();
+                getActivity().finish();
             }
         });
         textView5.setOnClickListener(new View.OnClickListener() {
@@ -106,8 +107,11 @@ public class MyFragment extends Fragment {
                 @Override
                 public void onFish(Object o) {
                     UserInforBean userInforBean= (UserInforBean) o;
-                    textView.setText(userInforBean.user.nickName);
-                    Tool.setGlide(getContext(),"/prod-api"+userInforBean.user.avatar,imageView);
+                    if (userInforBean.code==200){
+                        textView.setText(userInforBean.user.nickName);
+                        Tool.setGlide(getContext(),"/prod-api"+userInforBean.user.avatar,imageView);
+                    }
+
                 }
             });
         }
