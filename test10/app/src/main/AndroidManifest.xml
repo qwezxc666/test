@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test10">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.F52Activity"></activity>
+        <activity android:name=".Activity.F5Activity" />
+        <activity android:name=".Activity.F42Activity" />
+        <activity android:name=".Activity.F4Activity" />
+        <activity android:name=".Activity.F32Activity" />
+        <activity android:name=".Activity.F3Activity" />
+        <activity android:name=".Activity.F22Activity" />
+        <activity android:name=".Activity.F2Activity" />
+        <activity android:name=".Activity.FnewsinforActivity" />
+        <activity android:name=".Activity.F1Activity" />
+        <activity android:name=".Activity.Y2Activity" />
+        <activity android:name=".Activity.Y4Activity" />
+        <activity android:name=".Activity.Y32Activity" />
+        <activity android:name=".Activity.Y3Activity" />
+        <activity android:name=".Activity.Y12Activity" />
+        <activity android:name=".Activity.Y1Activity" />
+        <activity android:name=".Activity.YlyInforActivity" />
+        <activity android:name=".S23Activity" />
+        <activity android:name=".Smart.S22Activity" />
+        <activity android:name=".Smart.S2Activity" />
+        <activity android:name=".Smart.S12Activity" />
+        <activity android:name=".Smart.S1Activity" />
+        <activity android:name=".Smart.CarInforActivity" />
+        <activity android:name=".Smart.S4Activity" />
+        <activity android:name=".Smart.S32Activity" />
+        <activity android:name=".Smart.S3Activity" />
+        <activity android:name=".Smart.AdvInforActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

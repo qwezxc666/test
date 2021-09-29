@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="12dp"
+    tools:context=".Activity.F1Activity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+            <ImageView
+                android:id="@+id/iv1"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tv1"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:layout_marginVertical="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginVertical="12dp"
+            android:text="\t\t随着工作生活信息化、网络化、数据化持续加深，消除贫困是社会主义制度的本质要求，是贯彻落实群众路线的生动体现，更是推进经济跨越发展、全面建设小康社会。我国是世界上人口最多的发展中国家，农村经济不平衡现象突出。特别是农村贫困人口多，给扶贫工作造成很大的困扰。
+促进社会和谐稳定的迫切需要。深入推进扶贫工作事关党的执政基础，事关国家的长治久安，现实意义十分重大。
+通过精准扶贫系统建设，主要解决帮扶人员与贫困户缺少互动沟通平台，扶贫信息难以精准推送，帮扶工作考核难建设目标。"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="2021年9月29日10:46:12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

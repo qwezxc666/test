@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView app:cardCornerRadius="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/l1"
+    android:layout_marginBottom="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv1"
+            android:scaleType="centerCrop"
+            android:layout_width="120dp"
+            android:layout_height="90dp"/>
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv1"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginVertical="12dp"
+                android:text="促进社会和谐稳定的迫切需要。深入推进扶贫工作事关党的执政基础，事关国家的长治久安，现实意义十分重大。
+通过精准扶贫系统建设，主要解决帮扶人员与贫困户缺少互动沟通平台，扶贫信息难以精准推送，帮扶工作考核难建设目标。"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="主要扶贫参与人：xxx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

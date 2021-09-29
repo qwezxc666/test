@@ -56,6 +56,7 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         initView(root);
         getbanner();
+
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -131,6 +132,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onFish(Object o) {
                 final AdvBean advBean = (AdvBean) o;
+
                 banner.setImages(advBean.rows).setImageLoader(new ImageLoader() {
                     @Override
                     public void displayImage(Context context, Object o, ImageView imageView) {

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".ui.Acitvity.EditPasswActivity">
+    <EditText
+        android:padding="10dp"
+        android:hint="新密码"
+        android:id="@+id/et1"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:hint="旧密码"
+        android:id="@+id/et2"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <Button
+        android:id="@+id/b1"
+        android:layout_margin="10dp"
+        android:text="保存"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

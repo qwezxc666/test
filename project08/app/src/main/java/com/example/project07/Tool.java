@@ -11,6 +11,8 @@ public class Tool {
     public static PBean.RowsBean p;
     public static NewBean.RowsBean newsBean;
     public static String key;
+    public static int i;
+
     public static String gettoken(Context context){
         return context.getSharedPreferences("app",Context.MODE_PRIVATE).getString("token","");
     }
