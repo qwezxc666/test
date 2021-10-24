@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="12dp"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.TgActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv1"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginVertical="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/iv1"
+            android:layout_marginVertical="12dp"/>
+        <TextView
+            android:text="\t\t《智慧社区》是指通过利用智能技术和方式，整合社区各类服务资源，为居民提供物业、娱乐、商务、便民服务、友邻社交等功能的生活应用系统。
+智慧社区是社区管理的一个新的管理形态，它利用物联网、云计算、移动互联网等新一代信息技术的集成应用,为社区居民提供一个安全舒适的智慧化生活环境,从而形成基于信息化、智能化社区管理与服务。
+“以智慧小区提升社区品质”是社区管理的目标，社区引入智慧平台的能够有效推动经济流动，促进现代服务业发展。通过智慧社区系统的建设，解决了社区物业管理机制的即时响应，周边商业服务的推广，社区物业通知，友邻社交的平台等居民生活需求，系统主要包括以下功能模块
+"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

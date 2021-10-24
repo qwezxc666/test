@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="12dp"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Q3Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp">
+            <com.youth.banner.Banner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/banner"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.appcompat.widget.SearchView
+            android:layout_marginVertical="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:iconifiedByDefault="false"
+            android:background="@drawable/back"
+            android:id="@+id/search"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/re"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="房源展示"
+            android:layout_marginVertical="12dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/re2"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

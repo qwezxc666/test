@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cse01">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Smart.S42Activity"></activity>
+        <activity android:name=".Activity.Q43Activity" />
+        <activity android:name=".Activity.Q42Activity" />
+        <activity android:name=".Activity.Q4Activity" />
+        <activity android:name=".Activity.HoSearchActivity" />
+        <activity android:name=".Activity.Q32Activity" />
+        <activity android:name=".Activity.Q3Activity" />
+        <activity android:name=".Activity.Q27Activity" />
+        <activity android:name=".Activity.Q26Activity" />
+        <activity android:name=".Activity.Q25Activity" />
+        <activity android:name=".Activity.Q24Activity" />
+        <activity android:name=".Activity.Q23Activity" />
+        <activity android:name=".Activity.HosSearchActivity" />
+        <activity android:name=".Activity.Q22Activity" />
+        <activity android:name=".Activity.Q2Activity" />
+        <activity android:name=".Activity.Q15Activity" />
+        <activity android:name=".Activity.Q14Activity" />
+        <activity android:name=".Activity.Q13Activity" />
+        <activity android:name=".Activity.Q12Activity" />
+        <activity android:name=".Activity.QActivity" />
+        <activity android:name=".Smart.S4Activity" />
+        <activity android:name=".Smart.S32Activity" />
+        <activity android:name=".Smart.S3Activity" />
+        <activity android:name=".Smart.S23Activity" />
+        <activity android:name=".Smart.S22ctivity" />
+        <activity android:name=".Smart.S2Activity" />
+        <activity android:name=".Smart.S12Activity" />
+        <activity android:name=".Smart.S1Activity" />
+        <activity android:name=".ui.home.TgActivity" />
+        <activity android:name=".Smart.InforActivity" />
+        <activity android:name=".Activity.M4Activity" />
+        <activity android:name=".Activity.M3Activity" />
+        <activity android:name=".Activity.M2Activity" />
+        <activity android:name=".Activity.M1Activity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.AdvInforActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
