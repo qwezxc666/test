@@ -32,8 +32,13 @@ public class Q2Activity extends BaseActivity {
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                if (query.isEmpty()){
+                    maketast("请输入搜索内容");
+                }else {
+
                 Tool.name=query;
                 startActivity(new Intent(getthis(),HosSearchActivity.class));
+                }
                 return false;
             }
 

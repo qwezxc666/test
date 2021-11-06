@@ -1,5 +1,6 @@
 package com.example.cse01.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import com.example.cse01.BaseActivity;
 import com.example.cse01.Bean.OrderBody;
 import com.example.cse01.Bean.ResultBean;
+import com.example.cse01.MainActivity;
 import com.example.cse01.MyCallback;
 import com.example.cse01.Okhttp;
 import com.example.cse01.R;
@@ -31,11 +33,14 @@ public class Q15Activity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_q15);
         initView();
         setTitle("智慧巴士");
-        et1.setText(Tool.person.s1);
-        et2.setText(Tool.person.s2);
-        et3.setText(Tool.person.s3);
-        et4.setText(Tool.person.s4);
-        et5.setText(Tool.time);
+        if (Tool.person!=null){
+            et1.setText(Tool.person.s1);
+            et2.setText(Tool.person.s2);
+            et3.setText(Tool.person.s3);
+            et4.setText(Tool.person.s4);
+            et5.setText(Tool.time);
+        }
+
     }
 
     private void initView() {
@@ -102,6 +107,11 @@ public class Q15Activity extends BaseActivity implements View.OnClickListener {
                     public void onFish(Object o) {
                         ResultBean resultBean= (ResultBean) o;
                         maketast(resultBean.msg);
+                        if (resultBean.code==200){
+                            Intent intent=new Intent(getthis(), MainActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                        }
                     }
                 });
     }

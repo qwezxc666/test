@@ -29,6 +29,9 @@
                 android:textColor="#000"
                 android:text="乘客姓名"/>
             <EditText
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:ems="11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et1"
@@ -45,6 +48,8 @@
                 android:textColor="#000"
                 android:text="手机号码"/>
             <EditText
+                android:inputType="number"
+                android:maxLength="11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et2"
@@ -56,11 +61,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:text="上车地点"/>
             <EditText
+                android:ems="10"
+                android:inputType="text"
+                android:lines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et3"
@@ -77,6 +86,9 @@
                 android:textColor="#000"
                 android:text="下车地点"/>
             <EditText
+                android:ems="10"
+                android:inputType="text"
+                android:lines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et4"

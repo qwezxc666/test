@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            android:lines="1"
+            android:inputType="textPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
@@ -30,11 +32,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:text="*性别"/>
         <EditText
+            android:lines="1"
+            android:maxLength="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -46,12 +51,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:text="*身份证号"/>
         <EditText
-            android:layout_width="match_parent"
+            android:lines="1"
+            android:maxLength="18"
+             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:id="@+id/et3"/>
@@ -67,6 +75,8 @@
             android:textColor="#000"
             android:text="*出生日期"/>
         <EditText
+            android:maxLines="1"
+            android:inputType="datetime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -78,11 +88,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:text="*手机号"/>
         <EditText
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -99,12 +113,15 @@
             android:textColor="#000"
             android:text="*地址"/>
         <EditText
+            android:inputType="text"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:id="@+id/et6"/>
     </LinearLayout>
     <Button
+        android:id="@+id/b1"
         android:layout_marginTop="12dp"
         style="@style/Widget.AppCompat.Button.Colored"
         android:text="确定"

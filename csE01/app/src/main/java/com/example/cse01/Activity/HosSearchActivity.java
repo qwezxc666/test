@@ -31,7 +31,7 @@ public class HosSearchActivity extends BaseActivity {
         initView();
 
         }else {
-            maketast("请输入搜索内容");
+
         }
     }
 

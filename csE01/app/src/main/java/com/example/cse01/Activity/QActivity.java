@@ -2,6 +2,8 @@ package com.example.cse01.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -43,18 +45,29 @@ public class QActivity extends BaseActivity {
                         holder.setText(R.id.tv3,rowsBean.end);
                         holder.setText(R.id.tv4,rowsBean.price+"￥");
                         holder.setText(R.id.tv5,rowsBean.mileage);
+                        ImageView view = holder.getview(R.id.t1);
+                        ImageView view2 = holder.getview(R.id.t3);
+
                         holder.seton(R.id.t1,v -> {
-                           Okhttp.get("/prod-api/api/bus/stop/list?linesId=" + rowsBean.id, new MyCallback(getthis(), LineBean.class) {
-                               @Override
-                               public void onFish(Object o) {
+
+                            Okhttp.get("/prod-api/api/bus/stop/list?linesId=" + rowsBean.id, new MyCallback(getthis(), LineBean.class) {
+                                @Override
+                                public void onFish(Object o) {
                                     LineBean lineBean= (LineBean) o;
                                     StringBuffer buffer=new StringBuffer();
                                     for (LineBean.RowsBean rowsBean1:lineBean.rows){
                                         buffer.append(rowsBean1.name+"\n\n");
                                     }
                                     holder.setText(R.id.t2,buffer.toString());
-                               }
-                           });
+                                }
+                            });
+                            view.setVisibility(View.GONE);
+                            view2.setVisibility(View.VISIBLE);
+                        });
+                        holder.seton(R.id.t3,v -> {
+                            view2.setVisibility(View.GONE);
+                            view.setVisibility(View.VISIBLE);
+                            holder.setText(R.id.t2,"");
                         });
                         holder.seton(R.id.l1,v -> {
                             Tool.busbean=rowsBean;

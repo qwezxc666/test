@@ -43,7 +43,7 @@
                 android:layout_gravity="center"
                 android:padding="12dp"
                 android:textColor="#000"
-                android:text="预约挂号"/>
+                android:text="在线挂号"/>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

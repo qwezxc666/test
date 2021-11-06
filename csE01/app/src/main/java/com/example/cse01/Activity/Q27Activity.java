@@ -27,6 +27,11 @@ public class Q27Activity extends BaseActivity {
         tv1 = (TextView) findViewById(R.id.tv1);
         b1 = (Button) findViewById(R.id.b1);
         tv1.setText("预约科室 ："+ Tool.name +"\n\n门诊类型：普通号\n\n预约时间：2020-9-21周一 \n\n下午 14:00");
-        b1.setOnClickListener(v -> startActivity(new Intent(getthis(), MainActivity.class)));
+        b1.setOnClickListener(v -> {
+            Intent intent = new Intent(getthis(), MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+
+        });
     }
 }

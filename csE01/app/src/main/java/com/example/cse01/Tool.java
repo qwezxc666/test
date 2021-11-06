@@ -32,6 +32,9 @@ public class Tool {
     public static void setGlide(Context context, String str, ImageView view){
         Glide.with(context).load(Okhttp.web+str).into(view);
     }
+    public static void setGlide2(Context context, String str, ImageView view){
+        Glide.with(context).load(Okhttp.web+str).circleCrop().into(view);
+    }
     public static String gettoken(Context context){
         return context.getSharedPreferences("app",Context.MODE_PRIVATE).getString("token","");
     }

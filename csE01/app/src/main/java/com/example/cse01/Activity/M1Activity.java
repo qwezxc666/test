@@ -50,30 +50,35 @@ public class M1Activity extends BaseActivity {
         getinfor();
     }
     private void getinfor(){
-        Okhttp.get("/prod-api/api/common/user/getInfo", Tool.gettoken(getthis()),new MyCallback(getthis(), UserInforBean.class) {
-            @Override
-            public void onFish(Object o) {
-                UserInforBean userInforBean= (UserInforBean) o;
-                if (userInforBean.code==200){
-                    Tool.setGlide(getthis(),"/prod-api"+userInforBean.user.avatar,iv1);
-                    et1.setText(userInforBean.user.nickName);
-                    et2.setText(userInforBean.user.phonenumber);
-                    if (userInforBean.user.idCard!=null){
-                        et3.setText(userInforBean.user.idCard.replaceAll("(\\d{2})\\d{12}(\\d{4})","$1*****$2"));
-                    }
-                    if (userInforBean.user.sex.equals("0")){
-                        rb1.setChecked(true);
-                    }
-                    if (userInforBean.user.sex.equals("1")){
-                            rb2.setChecked(false);
+        try {
+            Okhttp.get("/prod-api/api/common/user/getInfo", Tool.gettoken(getthis()),new MyCallback(getthis(), UserInforBean.class) {
+                @Override
+                public void onFish(Object o) {
+                    UserInforBean userInforBean= (UserInforBean) o;
+                    if (userInforBean.code==200){
+                        Tool.setGlide(getthis(),"/prod-api"+userInforBean.user.avatar,iv1);
+                        et1.setText(userInforBean.user.nickName);
+                        et2.setText(userInforBean.user.phonenumber);
+                        if (userInforBean.user.idCard!=null){
+                            et3.setText(userInforBean.user.idCard.replaceAll("(\\d{2})\\d{12}(\\d{4})","$1*****$2"));
+                        }
+                        if (userInforBean.user.sex.equals("0")){
+                            rb1.setChecked(true);
+                        }
+                        if (userInforBean.user.sex.equals("1")){
+                                rb2.setChecked(false);
 
+                        }
+                    }else {
+                        startActivity(new Intent(getthis(), LoginActivity.class));
                     }
-                }else {
-                    startActivity(new Intent(getthis(), LoginActivity.class));
+
                 }
-
-            }
-        });
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+        }
     }
 
     @Override
@@ -99,7 +104,7 @@ public class M1Activity extends BaseActivity {
                             }
                         }
                     });
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

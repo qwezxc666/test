@@ -22,4 +22,5 @@
             android:id="@+id/re"
             android:layout_marginVertical="12dp"/>
     </LinearLayout>
+
 </androidx.core.widget.NestedScrollView>

@@ -2,6 +2,7 @@ package com.example.cse01.Activity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class Q24Activity extends BaseActivity {
     private EditText et4;
     private EditText et5;
     private EditText et6;
+    private Button b1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,43 +39,56 @@ public class Q24Activity extends BaseActivity {
         et4 = (EditText) findViewById(R.id.et4);
         et5 = (EditText) findViewById(R.id.et5);
         et6 = (EditText) findViewById(R.id.et6);
+        b1 = (Button) findViewById(R.id.b1);
+        b1.setOnClickListener(v -> {
+            submit();
+        });
     }
 
     private void submit() {
         // validate
         String et1String = et1.getText().toString().trim();
         if (TextUtils.isEmpty(et1String)) {
-            Toast.makeText(this, "et1String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "姓名不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
 
         String et2String = et2.getText().toString().trim();
         if (TextUtils.isEmpty(et2String)) {
-            Toast.makeText(this, "et2String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "性别不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
+        if (et2String.equals("男")||et2String.equals("女")){
 
+        }else {
+            maketast("性别不合法");
+            return;
+        }
         String et3String = et3.getText().toString().trim();
         if (TextUtils.isEmpty(et3String)) {
-            Toast.makeText(this, "et3String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "身份证号不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
-
+        if (et3String.length()!=18){
+            maketast("身份证号长度不对");
+        }
         String et4String = et4.getText().toString().trim();
         if (TextUtils.isEmpty(et4String)) {
-            Toast.makeText(this, "et4String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "出生日期不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
 
         String et5String = et5.getText().toString().trim();
         if (TextUtils.isEmpty(et5String)) {
-            Toast.makeText(this, "et5String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "手机号不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
-
+        if (et3String.length()!=11){
+            maketast("手机号码长度不对");
+        }
         String et6String = et6.getText().toString().trim();
         if (TextUtils.isEmpty(et6String)) {
-            Toast.makeText(this, "et6String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "地址不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -82,9 +97,9 @@ public class Q24Activity extends BaseActivity {
                 , new MyCallback(getthis(), ResultBean.class) {
                     @Override
                     public void onFish(Object o) {
-                        ResultBean resultBean= (ResultBean) o;
+                        ResultBean resultBean = (ResultBean) o;
                         maketast(resultBean.msg);
-                        if (resultBean.code==200){
+                        if (resultBean.code == 200) {
                             finish();
                         }
                     }

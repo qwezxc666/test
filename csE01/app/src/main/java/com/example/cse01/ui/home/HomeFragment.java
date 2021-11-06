@@ -4,10 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +22,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cse01.Activity.AdvInforActivity;
+import com.example.cse01.Activity.Q14Activity;
+import com.example.cse01.Activity.Q15Activity;
 import com.example.cse01.Activity.Q2Activity;
 import com.example.cse01.Activity.Q3Activity;
 import com.example.cse01.Activity.Q4Activity;
@@ -106,8 +111,13 @@ public class HomeFragment extends Fragment {
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                if (query==null){
+                    Toast.makeText(getContext(), "请输入内容", Toast.LENGTH_SHORT).show();
+                }else {
+
                 Tool.name=query;
                 ((MainActivity)getActivity()).navController.navigate(R.id.navigation_notifications);
+                }
                 return false;
             }
 
@@ -151,7 +161,7 @@ public class HomeFragment extends Fragment {
 
                         if (holder.getAdapterPosition()==9){
                             holder.setText(R.id.tv1,"更多服务");
-                            holder.setGlide(R.id.iv1,R.drawable.fw);
+                            holder.setGlide(R.id.iv1,R.drawable.fw3);
                         }else {
                             holder.setText(R.id.tv1,rowsBean.serviceName);
                             holder.setGlide(R.id.iv1,rowsBean.imgUrl);
@@ -172,6 +182,9 @@ public class HomeFragment extends Fragment {
                             if (holder.getAdapterPosition()==4){
                                 startActivity(new Intent(getContext(), Q4Activity.class));
                             }
+//                            if (holder.getAdapterPosition()==1){
+//                                startActivity(new Intent(getContext(), Q14Activity.class));
+//                            }
                         });
                     }
 
@@ -229,8 +242,11 @@ public class HomeFragment extends Fragment {
         });
     }
     private boolean ispad(Context context){
+        WindowManager manager= (WindowManager) context.getSystemService(context.WINDOW_SERVICE);
+        Display display=manager.getDefaultDisplay();
         Point point=new Point();
-        if (point.x>point.y){
+        display.getSize(point);
+         if (point.x>point.y){
             return true;
         }else {
             return false;

@@ -62,25 +62,28 @@ public class Q14Activity extends BaseActivity implements View.OnClickListener {
         // validate
         String et1String = et1.getText().toString().trim();
         if (TextUtils.isEmpty(et1String)) {
-            Toast.makeText(this, "et1String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "乘车姓名不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
 
         String et2String = et2.getText().toString().trim();
         if (TextUtils.isEmpty(et2String)) {
-            Toast.makeText(this, "et2String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "手机号不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
 
         String et3String = et3.getText().toString().trim();
         if (TextUtils.isEmpty(et3String)) {
-            Toast.makeText(this, "et3String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "上车地点不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
-
+        if (et2String.length()!=11){
+            maketast("手机号不合法");
+            return;
+        }
         String et4String = et4.getText().toString().trim();
         if (TextUtils.isEmpty(et4String)) {
-            Toast.makeText(this, "et4String不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "下车地点不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
         Tool.person = new person(et1String, et2String, et3String, et4String);

@@ -44,7 +44,7 @@ public class NotificationsFragment extends Fragment {
         initView(view);
 
         }else {
-            Toast.makeText(getContext(), "请输入内容", Toast.LENGTH_SHORT).show();
+
         }
     }
 

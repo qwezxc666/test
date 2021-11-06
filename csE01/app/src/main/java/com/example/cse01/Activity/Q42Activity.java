@@ -37,7 +37,7 @@ public class Q42Activity extends BaseActivity {
             @Override
             public void onFish(Object o) {
                 LLBean llBean= (LLBean) o;
-                if (llBean.code==200){
+                if (llBean.total!=0){
                     re.setAdapter(new CommAdapter<LLBean.RowsBean>(getthis(),llBean.rows.subList(0,5),R.layout.ll_item) {
                         @Override
                         public void convert(Vh holder, LLBean.RowsBean rowsBean) {
